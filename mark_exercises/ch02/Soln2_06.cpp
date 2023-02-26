@@ -1,0 +1,1 @@
+../../Exercises/NoModules/Chapter 02/Soln2_06.cpp
