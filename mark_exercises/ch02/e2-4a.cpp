@@ -6,6 +6,7 @@ feet and inches. A kilogram is 2.2 pounds, and a foot is 0.3048 meters.
 */
 
 #include <iostream>
+#include <iomanip>
 #include <cmath>
 #include <numbers>
 
@@ -21,5 +22,9 @@ int main ()
     std::cin >> hFt >> hIn;
     float w = wPounds / 2.2; // weight [kg]
     float h = (hFt + hIn/12.0)*0.3048; // height [m]
+    // This one works:
+    //std::cout.precision(3);
+    // This one also works if iomanip included above.
+    std::cout << std::setprecision(1) << std::fixed;
     std::cout << "Your BMI = " << w / (h*h) << std::endl;
 }
